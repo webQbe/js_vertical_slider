@@ -1,0 +1,21 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/* Page reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+}
+
+.slider-container {
+    position: relative; /* everything inside is absolute */
+    overflow: hidden; /* no scrollbars */
+    width: 100vw; /* whole width */
+    height: 100vh; /* whole height */
+}
