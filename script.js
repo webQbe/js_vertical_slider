@@ -24,3 +24,8 @@ slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`;
     }
 
   */
+
+// Listen for Up & Down button clicks
+upButton.addEventListener('click', () => changeSlide('up'));
+downButton.addEventListener('click', () => changeSlide('down'));
+
