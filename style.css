@@ -1,7 +1,8 @@
 /* Import Font */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-/* Page reset */
+/* Page reset with universal selector */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,3 +20,45 @@ body {
     width: 100vw; /* whole width */
     height: 100vh; /* whole height */
 }
+
+.left-slide {
+    height: 100%;
+    width: 35%; /* 35% of container */
+    position: absolute; /* overlap container*/
+    top: 0; left: 0; /* Align element to the top-left corner of its container. */
+}
+
+/* Style immediate .left-slide divs */
+.left-slide > div {
+
+    height: 100%; /* Take entire height  */
+    width: 100%;
+    display: flex; flex-direction: column; /* Align Y */
+    align-items: center; /* Center X */
+    justify-content: center; /* Center Y */
+    color: #fff;
+
+    /*  Selector Breakdown .left-slide > div
+
+        .left-slide:
+            Targets any element with the class left-slide.
+
+        > (Direct Child Combinator):
+            The > symbol indicates that the rule applies only to elements that are direct children of the .left-slide element.
+
+            It does not apply to nested or descendant elements deeper in the DOM hierarchy.
+
+        div:
+            Specifies that only <div> elements are targeted. */
+}
+
+
+.left-slide h1{
+
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;  
+    
+}
+
+
