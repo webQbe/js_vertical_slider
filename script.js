@@ -11,7 +11,7 @@ const slidesLength = slideRight.querySelectorAll('div').length;
 // Current Slide Index
 let visibleSlideIndex = 0;
 
-// Go to last slide
+// Start from last left slide
 slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`;
 
 /* How slideLeft is styled?
@@ -38,17 +38,27 @@ const changeSlide = (direction) => {
     // If Up button clicked
     if(direction === 'up'){
 
-        visibleSlideIndex++ // Move up
+        visibleSlideIndex++ // Increment index by 1
 
         // At last slide, go back to first slide
-        if(visibleSlideIndex > slidesLength - 1) visibleSlideIndex = 0
+        if(visibleSlideIndex > slidesLength - 1) visibleSlideIndex = 0;
+
+    } else if(direction === 'down') {
+
+        // Down button is clicked
+
+        visibleSlideIndex-- /// Decrement index by 1
+
+        // At first slide, go to last slide
+        if(visibleSlideIndex < 0) visibleSlideIndex = slidesLength - 1;
+
     }
 
     // Moving right slides Upwards with 
     // current slide index * display height value
     slideRight.style.transform = `translateY(-${visibleSlideIndex * sliderHeight}px)`;
 
-    // Moving right slides Downwards with 
+    // Moving left slides Downwards with 
     slideLeft.style.transform = `translateY(${visibleSlideIndex * sliderHeight}px)`;
 
 }
