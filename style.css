@@ -26,6 +26,7 @@ body {
     width: 35%; /* 35% of container */
     position: absolute; /* overlap container*/
     top: 0; left: 0; /* Align element to the top-left corner of its container. */
+    transition: transform 0.5s ease-in-out;
 }
 
 /* Style immediate .left-slide divs */
@@ -70,7 +71,7 @@ body {
     top: 0; /* Align to top */
     left: 35%; /* Start after left-slide */
     width: 65%; /* 100% - 35% */
-
+    transition: transform 0.5s ease-in-out;
 }
 
 /* Style direct divs */
