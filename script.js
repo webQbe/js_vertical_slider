@@ -32,8 +32,19 @@ downButton.addEventListener('click', () => changeSlide('down'));
 
 const changeSlide = (direction) => {
 
-    // Log container's current height
+    // Get display height
     const sliderHeight = sliderContainer.clientHeight;
-    console.log(sliderHeight);
 
+    // If Up button clicked
+    if(direction === 'up'){
+
+        visibleSlideIndex++ // Move up
+
+        // At last slide, go back to first slide
+        if(visibleSlideIndex > slidesLength - 1) visibleSlideIndex = 0
+    }
+
+    // Moving right slides Upwards with 
+    // current slide index * display height value
+    slideRight.style.transform = `translateY(-${visibleSlideIndex * sliderHeight}px)`;
 }
