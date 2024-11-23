@@ -7,4 +7,20 @@ const downButton = document.querySelector('.down-button');
 
 // Get slide count
 const slidesLength = slideRight.querySelectorAll('div').length;
-console.log(slidesLength);
+
+// Current Slide Index
+let visibleSlideIndex = 0;
+
+// Go to last slide
+slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`;
+
+/* How slideLeft is styled?
+
+    .left-slide{
+
+           top: -{(4 - 1) * 100vh};
+
+           (Moving 3 slides (3 x 100vh) up to display last slide)
+    }
+
+  */

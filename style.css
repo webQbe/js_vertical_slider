@@ -38,6 +38,8 @@ body {
     justify-content: center; /* Center Y */
     color: #fff;
 
+    /* Only first div is displayed since they're overlapping each other */
+
     /*  Selector Breakdown .left-slide > div
 
         .left-slide:
