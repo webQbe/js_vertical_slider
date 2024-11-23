@@ -61,4 +61,25 @@ body {
     
 }
 
+.right-slide{
+
+    height: 100%;
+    position: absolute; /* Overlap container */
+    top: 0; /* Align to top */
+    left: 35%; /* Start after left-slide */
+    width: 65%; /* 100% - 35% */
+
+}
+
+/* Style direct divs */
+.right-slide > div {
+    /* background image is set inside divs */
+    background-repeat: no-repeat;
+    background-size: cover; /* Show whole image */
+    background-position: center center; /* X & Y */
+    height: 100%;
+    width: 100%;
+
+}
+
 
