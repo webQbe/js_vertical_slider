@@ -47,4 +47,8 @@ const changeSlide = (direction) => {
     // Moving right slides Upwards with 
     // current slide index * display height value
     slideRight.style.transform = `translateY(-${visibleSlideIndex * sliderHeight}px)`;
+
+    // Moving right slides Downwards with 
+    slideLeft.style.transform = `translateY(${visibleSlideIndex * sliderHeight}px)`;
+
 }
