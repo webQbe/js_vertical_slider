@@ -83,3 +83,62 @@ body {
 }
 
 
+/* General button style */
+button{
+
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    font-size: 16px;
+    padding: 15px;
+
+}
+
+
+button:hover {
+
+    color: #222;
+
+}
+
+button:focus{
+
+    outline: none;
+
+}
+
+
+/* Style up & down buttons */
+.slider-container .action-buttons button {
+
+    position: absolute; /* Overlap container */
+    left: 35%; /* Push to right */
+    top: 50%; /* Push downwards */
+    z-index: 100; /* Bring to front */
+
+}
+
+
+/* Style overlapping .down-button & .up-button  */
+
+.slider-container .action-buttons .down-button{
+
+    /* Move down button to left */
+    transform: translateX(-100%); 
+
+    /* Add rounded corners */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.slider-container .action-buttons .up-button{
+
+    /* Move up button to up */
+    transform: translateY(-100%); 
+
+     /* Add rounded corners */
+     border-top-right-radius: 5px;
+     border-bottom-right-radius: 5px;
+
+}
